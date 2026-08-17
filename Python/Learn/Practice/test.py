@@ -5,7 +5,7 @@ try:
   db = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="Subhas@263151",
+    password="",
     database="nodedb"
   )
   print("Connected !")
