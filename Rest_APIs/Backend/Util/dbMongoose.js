@@ -4,7 +4,7 @@ dns.setServers(["8.8.8.8", "8.8.4.4"]);
 const mongoose = require("mongoose");
 
 const DB = "Todo";
-const URL = `mongodb+srv://subhasbiswasofficial_db_user:8ic9tVWA0bQYndJA@mern-db.sypsrxp.mongodb.net/${DB}?appName=MERN-DB`;
+const URL = `mongodb+srv://:@mern-db.sypsrxp.mongodb.net/${DB}?appName=MERN-DB`;
 
 const MongooseConnect = async (callback) => {
   try {
