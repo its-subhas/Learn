@@ -1,0 +1,11 @@
+.calculator {
+  background-color: aqua;
+  width: 500px;
+  height: 100vh;
+  border: 2px solid black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
