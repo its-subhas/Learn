@@ -5,7 +5,7 @@ dns.setServers(["8.8.8.8", "8.8.4.4"]);
 const { MongoClient } = require("mongodb");
 
 const uri =
-  "mongodb+srv://subhasbiswasofficial_db_user:8ic9tVWA0bQYndJA@mern-db.sypsrxp.mongodb.net/?appName=MERN-DB";
+  "mongodb+srv://:@mern-db.sypsrxp.mongodb.net/?appName=MERN-DB";
 
 async function test() {
   try {
