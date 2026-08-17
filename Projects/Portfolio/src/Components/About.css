@@ -1,0 +1,417 @@
+/* ABOUT SECTION BASE */
+.about {
+  background: black;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  min-height: calc(100dvh - 60px);
+}
+
+/* MAIN TITLE */
+.main-about {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+/* SUBTITLE */
+.para {
+  color: white;
+  opacity: 0.8;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* SECTION TITLE */
+.me,
+.goals,
+.qualification {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  text-align: center;
+  color: white;
+  gap: 10px;
+  margin-top: 40px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  flex-wrap: wrap;
+  border-left: 4px solid white;
+  padding-left: 10px;
+}
+
+/* DIVIDER */
+.about hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, white, transparent);
+  margin: 10px 0 25px;
+}
+
+/* CARD CONTAINER */
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 60px;
+  padding-right: 20px;
+}
+
+/* CARD */
+.card {
+  width: 100%;
+  min-height: 320px;
+  border: 1px solid white;
+  background: black;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  transition: 0.3s ease;
+  overflow: hidden;
+}
+
+/* HOVER */
+.card:hover {
+  cursor: pointer;
+  background: #444;
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* IMAGE */
+.card-img-top {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background: white;
+}
+
+/* CARD BODY */
+.card-body {
+  width: 100%;
+}
+
+/* TEXT */
+.card-text {
+  font-size: 14px;
+  color: white;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* EDUCATION TEXT */
+.card-text h6 {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+}
+
+/* TABLET */
+@media (max-width: 769px) {
+  .about {
+    padding: 40px 15px;
+  }
+
+  .main-about {
+    font-size: 2rem;
+  }
+
+  .para {
+    font-size: 14px;
+  }
+
+  .me,
+  .goals,
+  .qualification {
+    justify-content: center;
+    font-size: 1.4rem;
+    border-bottom: 2px solid white;
+    width: fit-content;
+    padding-bottom: 5px;
+    border-left: none;
+    padding-left: 0;
+    margin: 40px auto 25px;
+  }
+
+  .about-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 651px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 426px) {
+  .about {
+    padding: 30px 10px;
+  }
+
+  .main-about {
+    font-size: 1.6rem;
+  }
+
+  .para {
+    font-size: 13px;
+  }
+
+  .me,
+  .goals,
+  .qualification {
+    font-size: 1.2rem;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .card {
+    padding: 12px;
+  }
+
+  .card-img-top {
+    height: 160px;
+  }
+
+  .card-text {
+    font-size: 13px;
+  }
+
+  .card-text h6 {
+    font-size: 13px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 376px) {
+  .about-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .main-about {
+    font-size: 1.4rem;
+  }
+
+  .me,
+  .goals,
+  .qualification {
+    font-size: 1rem;
+  }
+}
+
+/* EXTRA SMALL */
+@media (max-width: 231px) {
+  .about {
+    padding: 20px 5px;
+    overflow-x: hidden;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+    padding-left: 5px;
+    padding-right: 5px;
+    gap: 8px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 100%;
+    padding: 8px;
+    overflow: hidden;
+    word-break: break-word;
+  }
+
+  .card-img-top {
+    height: 100px;
+  }
+
+  .card-text {
+    font-size: 11px;
+  }
+
+  .card-text h6 {
+    font-size: 10px;
+  }
+
+  .main-about {
+    font-size: 1.1rem;
+  }
+
+  .me,
+  .goals,
+  .qualification {
+    font-size: 0.9rem;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 171px) {
+  .about {
+    padding: 10px 2px;
+    overflow-x: hidden;
+  }
+
+  .main-about {
+    font-size: 0.7rem;
+    word-break: break-word;
+  }
+
+  .para {
+    font-size: 6px;
+    margin-bottom: 10px;
+    word-break: break-word;
+  }
+
+  .me,
+  .goals,
+  .qualification {
+    font-size: 0.5rem;
+    gap: 2px;
+    margin-top: 15px;
+    padding-bottom: 2px;
+    word-break: break-word;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+    padding-left: 2px;
+    padding-right: 2px;
+    gap: 5px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 100%;
+    padding: 4px;
+    border-radius: 6px;
+    overflow: hidden;
+    word-break: break-word;
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+  }
+
+  .card-body {
+    width: 100%;
+  }
+
+  .card-text {
+    font-size: 6px;
+    line-height: 1.2;
+    word-break: break-word;
+  }
+
+  .card-text h6 {
+    font-size: 5px;
+    margin-bottom: 3px;
+    word-break: break-word;
+  }
+
+  .about hr {
+    margin: 5px 0 10px;
+  }
+}
+
+@media (max-width: 80px) {
+  .about {
+    padding: 4px 1px;
+    overflow-x: hidden;
+  }
+
+  .main-about {
+    font-size: 0.4rem;
+    line-height: 1;
+    word-break: break-word;
+  }
+
+  .para {
+    font-size: 3px;
+    margin-bottom: 4px;
+    line-height: 1;
+    word-break: break-word;
+  }
+
+  .me,
+  .goals,
+  .qualification {
+    font-size: 0.3rem;
+    gap: 1px;
+    margin-top: 6px;
+    padding-bottom: 1px;
+    line-height: 1;
+    word-break: break-word;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 2px;
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 100%;
+    padding: 2px;
+    border-radius: 3px;
+    overflow: hidden;
+    word-break: break-word;
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: 18px;
+    border-radius: 2px;
+    margin-bottom: 2px;
+    object-fit: cover;
+  }
+
+  .card-body {
+    width: 100%;
+    padding: 1px;
+  }
+
+  .card-text {
+    font-size: 3px;
+    line-height: 1;
+    word-break: break-word;
+  }
+
+  .card-text h6 {
+    font-size: 2.5px;
+    margin-bottom: 1px;
+    line-height: 1;
+    word-break: break-word;
+  }
+
+  .about hr {
+    margin: 2px 0 4px;
+  }
+}

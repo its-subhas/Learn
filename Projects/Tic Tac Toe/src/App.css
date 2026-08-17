@@ -1,0 +1,339 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0f1b21;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100dvw;
+  min-height: 100svh;
+  gap: 5px;
+  padding: 15px;
+}
+
+.heading {
+  margin-bottom: 30px;
+  color: white;
+}
+.container {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  gap: 5px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #0f1b21;
+  background: #1f3540;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.x-mark {
+  color: #26ffcb;
+}
+
+.o-mark {
+  color: gold;
+}
+
+.result {
+  width: 400px;
+  height: 100px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.result h4 {
+  font-size: larger;
+}
+
+.displayResults {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+}
+
+.gameDraw {
+  color: #26ffcb;
+}
+
+.playAgainButton {
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  background: #1f3540;
+  color: gold;
+  cursor: pointer;
+}
+.resetButton {
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  background: #1f3540;
+  color: #26ffcb;
+  cursor: pointer;
+}
+
+@media (max-width: 426px) {
+  .container {
+    width: 300px;
+    height: 300px;
+    gap: 5px;
+  }
+
+  .square {
+    width: 80px;
+    height: 80px;
+    font-size: small;
+  }
+
+  .result {
+    width: 300px;
+    height: 100px;
+  }
+
+  .result h4 {
+    font-size: large;
+  }
+}
+
+@media (max-width: 321px) {
+  .container {
+    width: 200px;
+    height: 200px;
+    gap: 5px;
+  }
+
+  .square {
+    width: 60px;
+    height: 60px;
+    font-size: x-small;
+  }
+
+  .result {
+    width: 200px;
+    height: 100px;
+  }
+
+  .result h4 {
+    font-size: medium;
+  }
+}
+
+@media (max-width: 241px) {
+  .heading {
+    font-size: small;
+  }
+
+  .container {
+    width: 150px;
+    height: 150px;
+    gap: 5px;
+  }
+
+  .square {
+    width: 50px;
+    height: 50px;
+    font-size: xx-small;
+  }
+
+  .result {
+    width: 150px;
+    height: 100px;
+  }
+
+  .result h4 {
+    font-size: small;
+  }
+
+  .playAgainButton {
+    width: 80px;
+    height: 30px;
+    font-size: x-small;
+  }
+  .resetButton {
+    width: 80px;
+    height: 30px;
+    font-size: x-small;
+  }
+}
+
+@media (max-width: 201px) {
+  .heading {
+    font-size: x-small;
+  }
+
+  .container {
+    width: 130px;
+    height: 130px;
+    gap: 2.5px;
+  }
+
+  .square {
+    width: 40px;
+    height: 40px;
+    font-size: xx-small;
+  }
+
+  .result {
+    width: 130px;
+    height: 80px;
+  }
+
+  .result h4 {
+    font-size: small;
+  }
+}
+
+@media (max-width: 150px) {
+  .heading {
+    font-size: xx-small;
+  }
+
+  .container {
+    width: 110px;
+    height: 110px;
+  }
+
+  .square {
+    width: 30px;
+    height: 30px;
+    font-size: 5px;
+  }
+
+  .result {
+    width: 110px;
+    height: 80px;
+  }
+
+  .result h4 {
+    font-size: x-small;
+  }
+
+  .playAgainButton {
+    width: 60px;
+    height: 20px;
+    font-size: xx-small;
+  }
+  .resetButton {
+    width: 60px;
+    height: 20px;
+    font-size: xx-small;
+  }
+}
+
+@media (max-width: 121px) {
+  .heading {
+    font-size: 5px;
+    margin-bottom: 10px;
+  }
+
+  .container {
+    width: 100px;
+    height: 100px;
+  }
+
+  .square {
+    width: 20px;
+    height: 20px;
+    font-size: 3px;
+  }
+
+  .result {
+    width: 100px;
+    height: 70px;
+  }
+
+  .result h4 {
+    font-size: 7px;
+  }
+
+  .playAgainButton {
+    width: 50px;
+    height: 20px;
+    font-size: 6px;
+  }
+  .resetButton {
+    width: 50px;
+    height: 20px;
+    font-size: 6px;
+  }
+}
+
+@media (max-width: 101px) {
+  .heading {
+    font-size: 2px;
+    margin-bottom: 5px;
+  }
+
+  .container {
+    width: 70px;
+    height: 70px;
+  }
+
+  .square {
+    width: 10px;
+    height: 10px;
+    font-size: 1px;
+  }
+
+  .result {
+    width: 70px;
+    height: 40px;
+  }
+
+  .result h4 {
+    font-size: 5px;
+  }
+
+  .playAgainButton {
+    width: 40px;
+    height: 20px;
+    font-size: 5px;
+  }
+  .resetButton {
+    width: 40px;
+    height: 20px;
+    font-size: 5px;
+  }
+}

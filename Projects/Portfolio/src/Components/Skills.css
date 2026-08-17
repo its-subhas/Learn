@@ -1,0 +1,342 @@
+/* SKILLS SECTION BASE */
+.sectionSkills {
+  background: black;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  min-height: calc(100dvh - 60px);
+}
+
+/* MAIN TITLE */
+.sectionH1Skills {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+/* SUBTITLE */
+.sectionPSkills {
+  color: white;
+  opacity: 0.8;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* CATEGORY TITLE */
+.titleContainerH2Skills {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  text-align: center;
+  color: white;
+  gap: 10px;
+  margin-top: 40px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  flex-wrap: wrap;
+  border-left: 4px solid white;
+  padding-left: 10px;
+}
+
+/* CATEGORY IMAGE */
+.titleContainerH2ImageSkills {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* DIVIDER */
+.titleContainerHrSkills {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, white, transparent);
+  margin: 10px 0 25px;
+}
+
+/* GRID CONTAINER */
+.cardContainerSkills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 60px;
+  padding-right: 20px;
+}
+
+/* CARD */
+.cardContainerSkillsCardSkills {
+  width: 100%;
+  height: 220px;
+  border: 1px solid white;
+  background: black;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+/* HOVER */
+.cardContainerSkillsCardSkills:hover {
+  cursor: pointer;
+  background: #444;
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* IMAGE */
+.cardContainerSkillsCardSkills img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  background: white;
+  padding: 6px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+/* TITLE */
+.cardContainerSkillsCardSkills h5 {
+  margin-bottom: 6px;
+}
+
+/* DESCRIPTION */
+.cardContainerSkillsCardSkills p {
+  font-size: 13px;
+  color: white;
+  opacity: 0.85;
+  line-height: 1.4;
+  display: -webkit-box;
+  /* -webkit-line-clamp: 3; */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* TABLET */
+@media (max-width: 769px) {
+  .sectionSkills {
+    padding: 40px 15px;
+  }
+
+  .sectionH1Skills {
+    font-size: 2rem;
+  }
+
+  .sectionPSkills {
+    font-size: 14px;
+  }
+
+  .titleContainerH2Skills {
+    justify-content: center;
+    font-size: 1.4rem;
+    border-bottom: 2px solid white;
+    width: fit-content;
+    padding-bottom: 5px;
+    border-left: none;
+    padding-left: 0;
+    margin: 40px auto 25px;
+  }
+
+  .cardContainerSkills {
+    padding-left: 20px;
+    padding-right: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  .cardContainerSkillsCardSkills {
+    height: 210px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 426px) {
+  .sectionSkills {
+    padding: 30px 10px;
+  }
+
+  .sectionH1Skills {
+    font-size: 1.6rem;
+  }
+
+  .sectionPSkills {
+    font-size: 13px;
+  }
+
+  .titleContainerH2Skills {
+    font-size: 1.2rem;
+  }
+
+  .cardContainerSkills {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .cardContainerSkillsCardSkills {
+    height: 200px;
+    padding: 12px;
+  }
+
+  .cardContainerSkillsCardSkills img {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 376px) {
+  .cardContainerSkills {
+    grid-template-columns: 1fr;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .sectionH1Skills {
+    font-size: 1.4rem;
+  }
+
+  .titleContainerH2Skills {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 200px) {
+  .sectionSkills {
+    padding: 20px 5px;
+    overflow-x: hidden;
+  }
+
+  .cardContainerSkills {
+    grid-template-columns: 1fr;
+    padding-left: 5px;
+    padding-right: 5px;
+    gap: 8px;
+  }
+
+  .cardContainerSkillsCardSkills {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding: 8px;
+    overflow: hidden;
+    word-break: break-word;
+  }
+
+  .cardContainerSkillsCardSkills img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .cardContainerSkillsCardSkills h5 {
+    font-size: 12px;
+  }
+
+  .cardContainerSkillsCardSkills p {
+    font-size: 11px;
+    /* -webkit-line-clamp: 2; */
+  }
+
+  .sectionH1Skills {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .titleContainerH2Skills {
+    font-size: 0.9rem;
+    gap: 5px;
+  }
+}
+
+/* 90PX SCREEN */
+@media (max-width: 91px) {
+  .sectionSkills {
+    padding: 8px 2px;
+    overflow-x: hidden;
+  }
+
+  .sectionH1Skills {
+    font-size: 0.5rem;
+    word-break: break-word;
+  }
+
+  .sectionPSkills {
+    font-size: 0.3rem;
+    margin-bottom: 6px;
+    word-break: break-word;
+  }
+
+  .titleContainerH2Skills {
+    font-size: 0.35rem;
+    gap: 2px;
+    margin: 10px auto 6px;
+    text-align: center;
+    justify-content: center;
+    border-bottom: 1px solid white;
+    padding-bottom: 2px;
+    width: fit-content;
+    word-break: break-word;
+  }
+
+  .titleContainerH2ImageSkills {
+    width: 10px;
+    height: 10px;
+  }
+
+  .titleContainerHrSkills {
+    margin: 4px 0 8px;
+  }
+
+  .cardContainerSkills {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .cardContainerSkillsCardSkills {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    height: auto;
+    padding: 4px 2px;
+    border-radius: 4px;
+    overflow: hidden;
+    word-break: break-word;
+  }
+
+  .cardContainerSkillsCardSkills img {
+    width: 14px;
+    height: 14px;
+    padding: 1px;
+    margin-bottom: 3px;
+  }
+
+  .cardContainerSkillsCardSkills h5 {
+    font-size: 0.35rem;
+    margin-bottom: 2px;
+    word-break: break-word;
+  }
+
+  .cardContainerSkillsCardSkills p {
+    font-size: 0.28rem;
+    line-height: 1.1;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .rowSkills {
+    margin: 0;
+  }
+
+  .col-md-4,
+  .col-lg-3 {
+    padding: 0;
+  }
+}

@@ -1,0 +1,497 @@
+/* CONTACT SECTION BASE */
+.contact {
+  background: black;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  min-height: calc(100dvh - 60px);
+}
+
+/* MAIN TITLE */
+.contactMainTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+/* SUBTITLE */
+.contactSubtitle {
+  color: white;
+  opacity: 0.8;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* SECTION TITLES */
+.socialHeadingContact,
+.emailHeadingContact,
+.messageHeadingContact {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  text-align: center;
+  color: white;
+  gap: 10px;
+  margin-top: 40px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  flex-wrap: wrap;
+  border-left: 4px solid white;
+  padding-left: 10px;
+}
+
+/* DIVIDER */
+.contact hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, white, transparent);
+  margin: 10px 0 25px;
+}
+
+/* CARD CONTAINER */
+.contactContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 60px;
+  padding-right: 20px;
+}
+
+/* CARD */
+.contactCard {
+  width: 100%;
+  min-height: 260px;
+  border: 1px solid white;
+  background: black;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+  overflow: hidden;
+}
+
+/* HOVER */
+.contactCard:hover {
+  cursor: pointer;
+  background: #444;
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* IMAGE */
+.contactCard img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* CARD BODY */
+.contactCardBody {
+  width: 100%;
+}
+
+/* CARD TEXT */
+.contactCardText {
+  font-size: 15px;
+  color: white;
+  margin-bottom: 12px;
+  opacity: 0.9;
+}
+
+/* LINKS */
+.contactCardBody a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background: black;
+  border: 1px solid white;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.contactCardBody a:hover {
+  background: white;
+  color: black;
+}
+
+/* EMAIL CONTAINER */
+.mailContainer {
+  /* max-width: 500px; */
+  max-width: auto;
+}
+
+/* MESSAGE CONTAINER */
+.message-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 60px;
+  padding-right: 20px;
+}
+
+/* FORM */
+.message-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* INPUTS & TEXTAREA */
+.message-form input,
+.message-form textarea {
+  width: 100%;
+  padding: 14px;
+  background: black;
+  border: 1px solid white;
+  border-radius: 10px;
+  color: white;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+/* PLACEHOLDER */
+.message-form input::placeholder,
+.message-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* BUTTON */
+.message-form button {
+  padding: 14px;
+  background: black;
+  color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.message-form button:hover {
+  background: white;
+  color: black;
+}
+
+/* ALERT */
+.form-alert {
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* SUCCESS */
+.form-alert.success {
+  background: rgba(0, 255, 150, 0.15);
+  color: #00ff95;
+  border: 1px solid #00ff95;
+}
+
+/* ERROR */
+.form-alert.error {
+  background: rgba(255, 0, 0, 0.15);
+  color: #ff4d4d;
+  border: 1px solid #ff4d4d;
+}
+
+/* LOADING */
+.form-alert.loading {
+  background: rgba(0, 188, 212, 0.15);
+  color: #00bcd4;
+  border: 1px solid #00bcd4;
+}
+
+/* TABLET */
+@media (max-width: 769px) {
+  .contact {
+    padding: 40px 15px;
+  }
+
+  .contactMainTitle {
+    font-size: 2rem;
+  }
+
+  .contactSubtitle {
+    font-size: 14px;
+  }
+
+  .socialHeadingContact,
+  .emailHeadingContact,
+  .messageHeadingContact {
+    justify-content: center;
+    font-size: 1.4rem;
+    border-bottom: 2px solid white;
+    width: fit-content;
+    padding-bottom: 5px;
+    border-left: none;
+    padding-left: 0;
+    margin: 40px auto 25px;
+  }
+
+  .contactContainer {
+    padding-left: 20px;
+    padding-right: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mailContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .message-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .contactCard {
+    min-height: 240px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 651px) {
+  .contactContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 426px) {
+  .contact {
+    padding: 30px 10px;
+  }
+
+  .contactMainTitle {
+    font-size: 1.6rem;
+  }
+
+  .contactSubtitle {
+    font-size: 13px;
+  }
+
+  .socialHeadingContact,
+  .emailHeadingContact,
+  .messageHeadingContact {
+    font-size: 1.2rem;
+  }
+
+  .contactContainer {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .message-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .contactCard {
+    padding: 12px;
+  }
+
+  .contactCard img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .contactCardText {
+    font-size: 13px;
+  }
+
+  .message-form input,
+  .message-form textarea,
+  .message-form button {
+    font-size: 13px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 376px) {
+  .contactContainer {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .message-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .contactMainTitle {
+    font-size: 1.4rem;
+  }
+
+  .socialHeadingContact,
+  .emailHeadingContact,
+  .messageHeadingContact {
+    font-size: 1rem;
+  }
+}
+
+/* EXTRA SMALL */
+@media (max-width: 200px) {
+  .contact {
+    padding: 20px 5px;
+    overflow-x: hidden;
+  }
+
+  .contactContainer {
+    grid-template-columns: 1fr;
+    padding-left: 5px;
+    padding-right: 5px;
+    gap: 8px;
+  }
+
+  .message-container {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .contactCard {
+    width: 100%;
+    max-width: 100%;
+    padding: 8px;
+    overflow: hidden;
+    word-break: break-word;
+  }
+
+  .contactCard img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .contactCardText {
+    font-size: 11px;
+  }
+
+  .contactMainTitle {
+    font-size: 1.1rem;
+  }
+
+  .socialHeadingContact,
+  .emailHeadingContact,
+  .messageHeadingContact {
+    font-size: 0.9rem;
+    gap: 5px;
+  }
+
+  .message-form input,
+  .message-form textarea,
+  .message-form button {
+    padding: 8px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 110px) {
+  .contact {
+    padding: 10px 2px;
+    overflow-x: hidden;
+  }
+
+  .contactMainTitle {
+    font-size: 0.7rem;
+    word-break: break-word;
+  }
+
+  .contactSubtitle {
+    font-size: 7px;
+    word-break: break-word;
+  }
+
+  .socialHeadingContact,
+  .emailHeadingContact,
+  .messageHeadingContact {
+    font-size: 0.5rem;
+    gap: 2px;
+    margin-top: 15px;
+    padding-bottom: 2px;
+    word-break: break-word;
+  }
+
+  .contactContainer,
+  .message-container {
+    padding-left: 2px;
+    padding-right: 2px;
+    gap: 5px;
+  }
+
+  .contactCard {
+    width: 100%;
+    max-width: 100%;
+    padding: 4px;
+    border-radius: 6px;
+    overflow: hidden;
+    word-break: break-word;
+  }
+
+  .contactCard img {
+    width: 18px;
+    height: 18px;
+    padding: 2px;
+    margin-bottom: 5px;
+  }
+
+  .contactCardText {
+    font-size: 6px;
+    margin-bottom: 5px;
+    line-height: 1.2;
+    word-break: break-word;
+  }
+
+  .contactCardBody a {
+    width: 100%;
+    padding: 4px 2px;
+    font-size: 6px;
+    border-radius: 4px;
+    word-break: break-word;
+  }
+
+  .message-form {
+    gap: 6px;
+  }
+
+  .message-form input,
+  .message-form textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 4px;
+    font-size: 6px;
+    border-radius: 4px;
+    word-break: break-word;
+  }
+
+  .message-form textarea {
+    min-height: 40px;
+  }
+
+  .message-form button {
+    width: 100%;
+    max-width: 100%;
+    padding: 4px;
+    font-size: 6px;
+    border-radius: 4px;
+    word-break: break-word;
+  }
+
+  .form-alert {
+    font-size: 6px;
+    padding: 4px;
+    word-break: break-word;
+  }
+}
