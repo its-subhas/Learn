@@ -1,0 +1,191 @@
+/* ================================
+   TODO FORM
+================================ */
+
+.main {
+  width: min(1100px, 92%);
+
+  margin: 32px auto 0;
+  padding: 20px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    220px
+    145px;
+
+  gap: 12px;
+
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.06),
+    0 2px 6px rgba(15, 23, 42, 0.03);
+
+  backdrop-filter: blur(10px);
+}
+
+/* ================================
+   INPUTS
+================================ */
+
+.inputContainer,
+.inputDateContainer {
+  width: 100%;
+  height: 52px;
+
+  padding: 0 16px;
+
+  color: #0f172a;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  background: #f8fafc;
+
+  border: 1px solid #dbe3ed;
+  border-radius: 12px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.inputContainer::placeholder {
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+.inputContainer:hover,
+.inputDateContainer:hover {
+  border-color: #b8c5d6;
+  background: #ffffff;
+}
+
+.inputContainer:focus,
+.inputDateContainer:focus {
+  background: #ffffff;
+  border-color: #3b82f6;
+
+  box-shadow:
+    0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+/* ================================
+   DATE
+================================ */
+
+.inputDateContainer {
+  cursor: pointer;
+}
+
+.inputDateContainer::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.65;
+}
+
+/* ================================
+   ADD / UPDATE BUTTON
+================================ */
+
+.addContainer {
+  width: 100%;
+  height: 52px;
+
+  border: 0;
+  border-radius: 12px;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 0.2px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #4f46e5
+  );
+
+  cursor: pointer;
+
+  box-shadow:
+    0 6px 15px rgba(37, 99, 235, 0.2);
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    filter 0.18s ease;
+}
+
+.addContainer:hover {
+  filter: brightness(1.05);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 22px rgba(37, 99, 235, 0.25);
+}
+
+.addContainer:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 800px) {
+  .main {
+    grid-template-columns: 1fr 180px 125px;
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 650px) {
+  .main {
+    width: min(500px, 92%);
+
+    margin-top: 24px;
+
+    padding: 16px;
+
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+
+    border-radius: 16px;
+  }
+
+  .inputContainer,
+  .inputDateContainer,
+  .addContainer {
+    height: 50px;
+  }
+}
+
+@media (max-width: 400px) {
+  .main {
+    width: 94%;
+    padding: 13px;
+  }
+
+  .inputContainer,
+  .inputDateContainer {
+    font-size: 14px;
+  }
+}

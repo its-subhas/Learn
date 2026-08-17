@@ -1,0 +1,258 @@
+/* ================================
+   TASK LIST
+================================ */
+
+.tasksMainContainer {
+  width: min(1100px, 92%);
+
+  margin: 24px auto 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+/* ================================
+   TASK CARD
+================================ */
+
+.tasksContainer {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    220px
+    145px;
+
+  gap: 12px;
+
+  align-items: center;
+
+  padding: 12px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+
+  box-shadow:
+    0 4px 15px rgba(15, 23, 42, 0.04);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.tasksContainer:hover {
+  transform: translateY(-2px);
+
+  border-color: #cbd5e1;
+
+  box-shadow:
+    0 10px 25px rgba(15, 23, 42, 0.07);
+}
+
+/* ================================
+   TASK
+================================ */
+
+.task {
+  min-height: 52px;
+
+  margin: 0;
+
+  padding: 11px 15px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  color: #1e293b;
+
+  background: #f8fafc;
+
+  border: 1px solid #edf2f7;
+  border-radius: 11px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  line-height: 1.5;
+
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* ================================
+   EDIT ICON
+================================ */
+
+.task svg {
+  flex-shrink: 0;
+
+  width: 18px;
+  height: 18px;
+
+  color: #2563eb;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.18s ease,
+    color 0.18s ease;
+}
+
+.task svg:hover {
+  color: #1d4ed8;
+  transform: scale(1.15);
+}
+
+/* ================================
+   DATE
+================================ */
+
+.date {
+  min-height: 52px;
+
+  margin: 0;
+  padding: 11px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #475569;
+
+  background: #f8fafc;
+
+  border: 1px solid #edf2f7;
+  border-radius: 11px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-align: center;
+
+  word-break: break-word;
+}
+
+/* ================================
+   DELETE BUTTON
+================================ */
+
+.del {
+  width: 100%;
+  height: 52px;
+
+  border: 0;
+  border-radius: 11px;
+
+  color: #dc2626;
+
+  background: #fef2f2;
+
+  border: 1px solid #fee2e2;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    color 0.18s ease,
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.del:hover {
+  color: #ffffff;
+
+  background: #dc2626;
+
+  border-color: #dc2626;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 7px 16px rgba(220, 38, 38, 0.18);
+}
+
+.del:active {
+  transform: scale(0.97);
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 800px) {
+  .tasksContainer {
+    grid-template-columns:
+      minmax(0, 1fr)
+      180px
+      125px;
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 650px) {
+  .tasksMainContainer {
+    width: min(500px, 92%);
+
+    margin-top: 20px;
+  }
+
+  .tasksContainer {
+    grid-template-columns: 1fr;
+
+    gap: 9px;
+
+    padding: 11px;
+
+    border-radius: 15px;
+  }
+
+  .task,
+  .date,
+  .del {
+    width: 100%;
+  }
+
+  .task {
+    min-height: 50px;
+  }
+
+  .date,
+  .del {
+    min-height: 48px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 400px) {
+  .tasksMainContainer {
+    width: 94%;
+  }
+
+  .task {
+    font-size: 14px;
+  }
+
+  .date {
+    font-size: 13px;
+  }
+
+  .del {
+    font-size: 12px;
+  }
+}

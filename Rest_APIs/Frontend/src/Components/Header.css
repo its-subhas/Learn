@@ -1,0 +1,85 @@
+/* ================================
+   HEADER
+================================ */
+
+.heading {
+  width: 100%;
+  padding: 42px 20px 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+/* subtle divider */
+.heading::after {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+
+  width: min(1100px, 90%);
+
+  height: 1px;
+
+  transform: translateX(-50%);
+
+  background: #e2e8f0;
+}
+
+/* ================================
+   TITLE
+================================ */
+
+.heading h1 {
+  position: relative;
+
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+
+  letter-spacing: -1.5px;
+
+  text-align: center;
+}
+
+/* Blue accent */
+
+.heading h1::after {
+  content: "";
+
+  display: block;
+
+  width: 48px;
+  height: 4px;
+
+  margin: 10px auto 0;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    90deg,
+    #2563eb,
+    #6366f1
+  );
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+  .heading {
+    padding: 30px 15px 24px;
+  }
+
+  .heading h1 {
+    font-size: 2rem;
+  }
+}
