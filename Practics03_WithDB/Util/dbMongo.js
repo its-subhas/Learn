@@ -5,7 +5,7 @@ const mongo = require("mongodb");
 const MongoClient = mongo.MongoClient;
 
 const URL =
-  "mongodb+srv://subhasbiswasofficial_db_user:8ic9tVWA0bQYndJA@mern-db.sypsrxp.mongodb.net/?appName=MERN-DB";
+  "mongodb+srv://:@mern-db.sypsrxp.mongodb.net/?appName=MERN-DB";
 
 let _db;
 
