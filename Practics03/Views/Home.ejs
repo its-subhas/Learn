@@ -1,0 +1,134 @@
+<%- include('Partials/Head') %>
+
+<body class="bg-gray-100">
+
+<%- include('Partials/Header') %>
+
+<main class="bg-gray-100 min-h-[calc(100vh-70px)] flex items-center justify-center px-4 py-4">
+
+  <div class="w-full max-w-4xl">
+
+    <!-- Show Registered Houses Button -->
+    <div class="flex items-center justify-center mb-6">
+  <a
+    href="/host/showHome"
+    class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 rounded-lg font-semibold shadow-md transition duration-300">
+    📋 Show Registered Houses
+  </a>
+</div>
+
+    <!-- Form Card -->
+    <div class="bg-white rounded-xl shadow-xl p-6">
+
+      <h1 class="text-2xl font-bold text-center text-blue-600 mb-5">
+        🏠 Register Your House
+      </h1>
+
+      <form action="/host/submited" method="POST" class="space-y-4">
+
+        <!-- Row 1 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label for="houseName" class="block text-sm font-semibold mb-1">House Name</label>
+            <input
+              type="text"
+              id="houseName"
+              name="houseName"
+              placeholder="Enter house name"
+              class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500"
+              required>
+          </div>
+
+          <div>
+            <label for="owner" class="block text-sm font-semibold mb-1">Owner Name</label>
+            <input
+              type="text"
+              id="owner"
+              name="owner"
+              placeholder="Enter owner name"
+              class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500"
+              required>
+          </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label for="location" class="block text-sm font-semibold mb-1">Location</label>
+            <input
+              type="text"
+              id="location"
+              name="location"
+              placeholder="Enter location"
+              class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500"
+              required>
+          </div>
+
+          <div>
+            <label for="rent" class="block text-sm font-semibold mb-1">Monthly Rent (₹)</label>
+            <input
+              type="number"
+              id="rent"
+              name="rent"
+              placeholder="Enter rent"
+              class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500"
+              required>
+          </div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label for="bedrooms" class="block text-sm font-semibold mb-1">Bedrooms</label>
+            <select
+              id="bedrooms"
+              name="bedrooms"
+              class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500">
+
+              <option value="1">1 BHK</option>
+              <option value="2">2 BHK</option>
+              <option value="3">3 BHK</option>
+              <option value="4">4+ BHK</option>
+
+            </select>
+          </div>
+
+          <div class="flex items-end">
+            <label class="flex items-center gap-2 font-medium">
+              <input
+                type="checkbox"
+                id="available"
+                name="available"
+                class="h-4 w-4">
+              Available for Rent
+            </label>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <div>
+          <label for="description" class="block text-sm font-semibold mb-1">Description</label>
+          <textarea
+            id="description"
+            name="description"
+            rows="3"
+            placeholder="Describe the house"
+            class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500"></textarea>
+        </div>
+
+        <button
+          type="submit"
+          class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2.5 rounded-lg font-semibold transition">
+          Register House
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</main>
+
+</body>
+</html>

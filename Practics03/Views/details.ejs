@@ -1,0 +1,195 @@
+<%- include('Partials/Head') %>
+
+<body class="bg-slate-100 min-h-screen">
+
+<%- include('Partials/Header') %>
+
+<main class="max-w-4xl mx-auto px-6 py-10">
+
+    <div class="bg-white rounded-3xl overflow-hidden shadow-lg">
+
+        <!-- Image -->
+        <div class="relative">
+            <img
+                src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=900"
+                alt="<%= details.houseName %>"
+                class="w-full h-80 object-cover">
+
+       
+
+            <% if( !(allBooking.find((home)=> home.id === details.id))  &&  (details.available == 'on')  ){ %>
+  
+                 <span class="absolute top-4 left-4 bg-green-600 text-white text-xs px-4 py-2 rounded-full shadow">
+                    Available
+                </span>
+            
+                
+
+            <% } else { %>
+               
+                <span class="absolute top-4 left-4 bg-red-600 text-white text-xs px-4 py-2 rounded-full shadow">
+                    Booked
+                </span>
+
+            <% } %>
+        </div>
+
+        <!-- Body -->
+        <div class="p-8">
+
+            <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+
+                <div>
+                    <h1 class="text-3xl font-bold text-gray-800">
+                        <%= details.houseName %>
+                    </h1>
+
+                    <p class="text-gray-500 mt-2">
+                        <%= details.location %>
+                    </p>
+                </div>
+
+                <div class="text-left md:text-right">
+                    <p class="text-3xl font-bold text-blue-600">
+                        ₹<%= details.rent %>
+                    </p>
+
+                    <span class="text-gray-400 text-sm">
+                        / month
+                    </span>
+                </div>
+
+            </div>
+
+            <hr class="my-6">
+
+            <div class="space-y-4 text-gray-700">
+
+                <p>
+                    <span class="font-semibold">Owner:</span>
+                    <%= details.owner %>
+                </p>
+
+                <p>
+                    <span class="font-semibold">Bedrooms:</span>
+                    <%= details.bedrooms %> BHK
+                </p>
+
+                <p>
+                    <span class="font-semibold">Description:</span>
+                    <%= details.description %>
+                </p>
+
+            </div>
+
+            <!-- Buttons -->
+          <div class="mt-8 flex items-center justify-between w-full">
+
+          <% if (favouriteData.includes(details.id)) { %>
+
+  <!-- Already Favourite -->
+  <form action="/user/addFavouriteDetails" method="POST">
+    <input type="hidden" name="id" value="<%= details.id %>">
+
+    <button
+      type="submit"
+      class="cursor-pointer flex items-center gap-2 text-red-500 hover:text-red-600 transition font-medium">
+
+      <svg xmlns="http://www.w3.org/2000/svg"
+           class="w-5 h-5 fill-red-500"
+           viewBox="0 0 24 24">
+
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5A5.5 5.5 0 017.5 3 5.5 5.5 0 0112 5.09 5.5 5.5 0 0116.5 3 5.5 5.5 0 0122 8.5c0 3.78-3.4 6.86-8.55 11.54z"/>
+      </svg>
+
+      Favourite
+    </button>
+  </form>
+
+<% } else { %>
+
+  <!-- Not Favourite -->
+  <form action="/user/addFavouriteDetails" method="POST">
+    <input type="hidden" name="id" value="<%= details.id %>">
+
+   <button
+      type="submit"
+      class="cursor-pointer flex items-center gap-2 text-gray-600 hover:text-red-500 transition font-medium">
+
+      <svg xmlns="http://www.w3.org/2000/svg"
+           class="w-5 h-5"
+           fill="none"
+           stroke="currentColor"
+           stroke-width="2"
+           viewBox="0 0 24 24">
+
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5A5.5 5.5 0 017.5 3 5.5 5.5 0 0112 5.09 5.5 5.5 0 0116.5 3 5.5 5.5 0 0122 8.5c0 3.78-3.4 6.86-8.55 11.54z"/>
+      </svg>
+
+      Favourite
+    </button>
+   </form>
+
+    <% } %>
+
+    <% if( allBooking.find((home)=> home.id === details.id) ) { %>
+                    
+                     <form
+                        action="/user/CancelBooking"
+                        method="POST"
+                        >
+
+                        <button
+                            type="submit"
+                            class="w-40 h-10 px-4 rounded-lg bg-red-600 text-white text-sm font-semibold cursor-pointer hover:bg-red-700 transition-all duration-300">
+
+                            Cancel Booking
+
+                        </button>
+
+                        <input
+                            type="hidden"
+                            name="id"
+                            value="<%= details.id %>">
+
+                    </form>
+
+                   
+    <% } else if ( !(allBooking.find((home)=> home.id === details.id))  &&  (details.available == 'on')  ) { %>
+
+  
+                        <form
+                            action="/user/bookHome/<%= details.id %>"
+                            method="POST">
+
+                            <button
+                                type="submit"
+                                class="cursor-pointer px-4 py-2 rounded-lg border border-blue-200 text-yellow-600 hover:bg-yellow-600 hover:text-white transition font-medium">
+
+                                Book
+
+                            </button>
+
+                        </form>
+
+
+
+     <% } else { %>
+
+                       <p class="text-red-600" > Home Not Available </p>
+
+
+
+              <% } %>  
+            
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<%- include('partials/head') %>
+<body class="bg-gray-100 min-h-screen">
+   <%- include('partials/headers') %>
+  <div class="max-w-2xl mx-auto mt-12 bg-white shadow-lg rounded-xl p-8">
+
+    <h1 class="text-4xl font-bold text-center text-blue-600 mb-8">
+      🏠 Home List
+    </h1>
+
+    <% if (houseList.length === 0) { %>
+
+      <p class="text-center text-gray-500 text-lg">
+        No houses added yet.
+      </p>
+
+    <% } else { %>
+
+      <ul class="space-y-4">
+
+        <% houseList.forEach(house => { %>
+
+          <li class="bg-blue-50 border border-blue-200 rounded-lg px-5 py-4 flex items-center justify-between hover:bg-blue-100 transition">
+
+            <span class="text-lg font-medium text-gray-800">
+              <%= house.House %>
+            </span>
+
+            <span class="text-2xl">🏡</span>
+
+          </li>
+
+        <% }) %>
+
+      </ul>
+
+    <% } %>
+
+    <div class="mt-8 text-center">
+      <a href="/host/form"
+         class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition font-semibold">
+        ➕ Add New House
+      </a>
+
+      <a href="/"
+         class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition font-semibold">
+        🏡 Go to Home Page
+      </a>
+
+  </div>
+
+</body>
+</html>
