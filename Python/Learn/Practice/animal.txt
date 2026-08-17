@@ -1,0 +1,57 @@
+students = {
+    "students": [
+        {
+            "id": 101,
+            "name": "Subhas",
+            "age": 21,
+            "course": "B.Tech",
+            "contact": {
+                "email": "subhas@example.com",
+                "phone": "9876543210"
+            },
+            "address": {
+                "city": "Dehradun",
+                "state": "Uttarakhand"
+            },
+            "subjects": [
+                {
+                    "name": "Python",
+                    "marks": 85
+                },
+                {
+                    "name": "Database",
+                    "marks": 78
+                }
+            ]
+        },
+        {
+            "id": 102,
+            "name": "Priya",
+            "age": 20,
+            "course": "BCA",
+            "contact": {
+                "email": "priya@example.com",
+                "phone": "9876543211"
+            },
+            "address": {
+                "city": "Haldwani",
+                "state": "Uttarakhand"
+            },
+            "subjects": [
+                {
+                    "name": "Java",
+                    "marks": 90
+                },
+                {
+                    "name": "Python",
+                    "marks": 88
+                }
+            ]
+        }
+    ]
+}
+
+
+
+[{"1": [{"name": "Subhas Biswas"}, {"college": "UTU"}, {"rollno": 77}, {"course": "B.Tech"}, {"branch": "CSE"}, {"year": 3}]},{"2": [{"name": "Muskan Verma"}, {"college": "UTU"}, {"rollno": 78}, {"course": "B.Tech"}, {"branch": "CSE"}, {"year": 3}]},
+{"3": [{"name": "Priya Bhatt"}, {"college": "UTU"}, {"rollno": 79}, {"course": "B.Tech"}, {"branch": "CSE"}, {"year": 3}]}]
